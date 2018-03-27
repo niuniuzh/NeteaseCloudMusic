@@ -25,16 +25,16 @@ const PLAYLIST_COMMENT = 'http://localhost:3000/comment/playlist?';//歌单评�
 const MV_COMMENT = 'http://localhost:3000/comment/mv?';//mv 评论
 const DJ_COMMENT = 'http://localhost:3000/comment/dj?';//电台节目评论
 const LIKE_COMMENT = 'http://localhost:3000/comment/like?';//给评论点赞
-const GET_BANNER = 'http://localhost:3000/banner?';//轮播图 
-const SONG_DETAIL = 'http://localhost:3000/song/detail?';//获取歌曲详情 
-const GET_ALBUM = 'http://localhost:3000/album?';//获取专辑内容 
-const ARTISTS = 'http://localhost:3000/artists?';//获取歌手单曲 
-const ARTISTS_MV = 'http://localhost:3000/artist/mv?';//获取歌手 mv 
-const ARTISTS_ALBUM = 'http://localhost:3000/artist/album?';//获取歌手专辑 
-const ARTISTS_DESC = 'http://localhost:3000/artist/desc?';//获取歌手描述 
-const SIMI_ARTISTS = 'http://localhost:3000/simi/artist?';//获取相似歌手 
-const SIMI_PLAYLIST = 'http://localhost:3000/simi/playlist?';//获取相似歌单 
-const SIMI_MV = 'http://localhost:3000/simi/mv?';//相似 mv 
+const GET_BANNER = 'http://localhost:3000/banner?';//轮播图
+const SONG_DETAIL = 'http://localhost:3000/song/detail?';//获取歌曲详情
+const GET_ALBUM = 'http://localhost:3000/album?';//获取专辑内容
+const ARTISTS = 'http://localhost:3000/artists?';//获取歌手单曲
+const ARTISTS_MV = 'http://localhost:3000/artist/mv?';//获取歌手 mv
+const ARTISTS_ALBUM = 'http://localhost:3000/artist/album?';//获取歌手专辑
+const ARTISTS_DESC = 'http://localhost:3000/artist/desc?';//获取歌手描述
+const SIMI_ARTISTS = 'http://localhost:3000/simi/artist?';//获取相似歌手
+const SIMI_PLAYLIST = 'http://localhost:3000/simi/playlist?';//获取相似歌单
+const SIMI_MV = 'http://localhost:3000/simi/mv?';//相似 mv
 const SIMI_SONG = 'http://localhost:3000/simi/song?';//获取相似音乐
 const SIMI_USER = 'http://localhost:3000/simi/user?';//获取最近 5 个听了这首歌的用户
 const RECOMMEND_RESOURCE = 'http://localhost:3000/recommend/resource?';//获取每日推荐歌单
@@ -82,7 +82,15 @@ const TOP_LIST = "http://localhost:3000/top/list?";//排行榜
 // "22": 云音乐ACG音乐榜,
 // "23": 云音乐嘻哈榜
 
-
+const TOP_LIST = "http://localhost:3000/top/list?";//排行榜
+const TOP_LIST_ARTIST = "http://localhost:3000/toplist/artist?";//歌手榜
+const USER_CLOUD = "http://localhost:3000/user/cloud?";//云盘
+const DJ_RECOMMEND ="http://localhost:3000/dj/recommend";//电台 - 推荐
+const DJ_CATELIST = "http://localhost:3000/dj/catelist?";//电台 - 分类
+const DJ_RECOMMEND_TYPE = "http://localhost:3000/dj/recommend/type?";//电台 - 分类推荐
+const DJ_SUB = "http://localhost:3000/dj/sub?";//电台 - 订阅
+const DJ_DETAIL = "http://localhost:3000/dj/detail?";//电台 - 详情
+const DJ_PROGRAM = "http://localhost:3000/dj/program?";//电台 - 节目
 
 export class AccountAction {
     private static instance: AccountAction;
@@ -149,7 +157,7 @@ export class AccountAction {
                     observe.next(res);
                 }, (error) => {
                     observe.error(error);
-                });  
+                });
         })
     }
     public getUserDJ():Observable<any>{
@@ -164,7 +172,7 @@ export class AccountAction {
                     observe.next(res);
                 }, (error) => {
                     observe.error(error);
-                });  
+                });
         })
     }
     public getUserFollows():Observable<any>{
@@ -179,7 +187,7 @@ export class AccountAction {
                     observe.next(res);
                 }, (error) => {
                     observe.error(error);
-                });  
+                });
         })
     }
     public getUserFolloweds():Observable<any>{
@@ -194,7 +202,7 @@ export class AccountAction {
                     observe.next(res);
                 }, (error) => {
                     observe.error(error);
-                });  
+                });
         })
     }
     public getUserEvent():Observable<any>{
@@ -209,7 +217,7 @@ export class AccountAction {
                     observe.next(res);
                 }, (error) => {
                     observe.error(error);
-                });  
+                });
         })
     }
     public getUserRecord():Observable<any>{
@@ -224,7 +232,7 @@ export class AccountAction {
                     observe.next(res);
                 }, (error) => {
                     observe.error(error);
-                });  
+                });
         })
     }
     public getDynamicEvent():Observable<any>{
@@ -236,7 +244,7 @@ export class AccountAction {
                     observe.next(res);
                 }, (error) => {
                     observe.error(error);
-                });  
+                });
         })
     }
     public getHighQualityList():Observable<any>{
@@ -248,7 +256,7 @@ export class AccountAction {
                     observe.next(res);
                 }, (error) => {
                     observe.error(error);
-                });  
+                });
         })
     }
     public getPlayListDetail():Observable<any>{
@@ -263,7 +271,7 @@ export class AccountAction {
                     observe.next(res);
                 }, (error) => {
                     observe.error(error);
-                });  
+                });
         })
     }
     public getMusicUrl():Observable<any>{
@@ -278,7 +286,7 @@ export class AccountAction {
                     observe.next(res);
                 }, (error) => {
                     observe.error(error);
-                });  
+                });
         })
     }
     public searchMusic():Observable<any>{
@@ -287,7 +295,7 @@ export class AccountAction {
             options.url = SEARCH_MUSIC;
             var args = {};
             args['keywords'] = '海阔天空';
-            args['limit']=30;//默认为 30 
+            args['limit']=30;//默认为 30
             args['offset'] = 0;//默认为 0
             args['type']=1;// 1: 单曲 10: 专辑 100: 歌手 1000: 歌单 1002: 用户 1004: MV 1006: 歌词 1009: 电台
             options.body = args;
@@ -296,7 +304,7 @@ export class AccountAction {
                     observe.next(res);
                 }, (error) => {
                     observe.error(error);
-                });  
+                });
         })
     }
     public searchSuggest():Observable<any>{
@@ -305,7 +313,7 @@ export class AccountAction {
             options.url = SEARCH_SUGGEST;
             var args = {};
             args['keywords'] = '海阔天空';
-            args['limit']=30;//默认为 30 
+            args['limit']=30;//默认为 30
             args['offset'] = 0;//默认为 0
             args['type']=1;// 1: 单曲 10: 专辑 100: 歌手 1000: 歌单 1002: 用户 1004: MV 1006: 歌词 1009: 电台
             options.body = args;
@@ -314,7 +322,7 @@ export class AccountAction {
                     observe.next(res);
                 }, (error) => {
                     observe.error(error);
-                });  
+                });
         })
     }
     public searchMultiMatch():Observable<any>{
@@ -329,7 +337,7 @@ export class AccountAction {
                     observe.next(res);
                 }, (error) => {
                     observe.error(error);
-                });  
+                });
         })
     }
     public playListTracks():Observable<any>{
@@ -337,7 +345,7 @@ export class AccountAction {
             let options = new RequestOptions();
             options.url = PLAYLIST_TRACKS;
             var args = {};
-            args['op'] = 'add';//增加单曲为 add, 删除为 del 
+            args['op'] = 'add';//增加单曲为 add, 删除为 del
             args['pid'] = '462499792';//歌单ID
             args['tracks'] = '海阔天空';//歌曲ID
             options.body = args;
@@ -346,7 +354,7 @@ export class AccountAction {
                     observe.next(res);
                 }, (error) => {
                     observe.error(error);
-                });  
+                });
         })
     }
     public getLyric():Observable<any>{
@@ -361,7 +369,7 @@ export class AccountAction {
                     observe.next(res);
                 }, (error) => {
                     observe.error(error);
-                });  
+                });
         })
     }
     public MusicComment():Observable<any>{
@@ -378,7 +386,7 @@ export class AccountAction {
                     observe.next(res);
                 }, (error) => {
                     observe.error(error);
-                });  
+                });
         })
     }
     public AlbumComment():Observable<any>{
@@ -395,7 +403,7 @@ export class AccountAction {
                     observe.next(res);
                 }, (error) => {
                     observe.error(error);
-                });  
+                });
         })
     }
     public PlayListComment():Observable<any>{
@@ -412,7 +420,7 @@ export class AccountAction {
                     observe.next(res);
                 }, (error) => {
                     observe.error(error);
-                });  
+                });
         })
     }
 }

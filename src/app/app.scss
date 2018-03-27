@@ -1,0 +1,246 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+
+$app-color:( wh:white, e7: #E72E17, 2b:#2b2b2b, d7:#d7d7d7, ef:#EFEFF4, f3:#f3f5f7, 99: #999999, fc:#FC9203, ee:#EE7C19, 92:#929292, ff0:#FF0000, 00:#00a4e5,fe:#feea0c,6b:#6b3908,bl:black);
+$app-font:( f11:0.2933rem, f12:0.32rem, f13:0.3467rem, f14:0.3733rem, f15:0.4rem, f16:0.4267rem, f19:0.5067rem, f20:0.5333rem, f22:0.5867rem, f32:0.8533rem, f40:1.0667rem, f50:1.3333rem);
+@function font($map, $key) {
+    @if ($key) {
+        @return map-get($map, $key);
+    }
+    @return 10px;
+}
+
+$header-background-border:rgba(231, 46, 23, 0.3);
+$header-background-color:color($app-color, e7);
+$header-title-color:white;
+.toolbar-ios-secondary .toolbar-background-ios {
+    font-size: 0.32rem
+}
+
+.button-inner .back-button-icon-ios {
+    font-size: 1.088rem;
+}
+
+.picker-ios .picker-opt {
+    height: 50px;
+}
+
+.item-ios {
+    min-height: 1.408rem;
+}
+
+.action-sheet-ios .action-sheet-title {
+    font-size: 15.6px;
+    padding: 18px;
+}
+
+.action-sheet-ios .action-sheet-button {
+    font-size: 18px;
+    min-height: 50px;
+}
+
+.back-button-ios {
+    min-height: 0;
+}
+
+.bg-color-wh {
+    background: color($app-color, wh)
+}
+
+.color-wh {
+    color: color($app-color, wh)
+}
+
+.bg-color-e7 {
+    background: color($app-color, e7)
+}
+
+.color-e7 {
+    color: color($app-color, e7)
+}
+
+.bg-color-2b {
+    background: color($app-color, 2b)
+}
+
+.color-2b {
+    color: color($app-color, 2b)
+}
+
+.bg-color-f3 {
+    background: color($app-color, f3)
+}
+
+.bg-color-d7 {
+    background: color($app-color, d7)
+}
+
+.color-d7 {
+    color: color($app-color, d7)
+}
+
+.bg-color-ef {
+    background: color($app-color, ef)
+}
+
+.bg-color-tr {
+    background: transparent;
+}
+
+.color-ef {
+    color: color($app-color, ef)
+}
+
+.color-ee {
+    color: color($app-color, ee)
+}
+
+.bg-color-f3 {
+    background: color($app-color, f3)
+}
+
+.color-f3 {
+    color: color($app-color, f3)
+}
+
+.color-99 {
+    color: color($app-color, 99)
+}
+
+.bg-color-99 {
+    background: color($app-color, 99)
+}
+
+.color-fc {
+    color: color($app-color, fc)
+}
+
+.bg-color-fe {
+    background: color($app-color, fe)
+}
+
+.color-6b {
+    color: color($app-color, 6b)
+}
+
+.color-bl {
+    color: color($app-color, bl)
+}
+
+
+.font-f11 {
+    font-size: font($app-font, f11)
+}
+
+.font-f12 {
+    font-size: font($app-font, f12)
+}
+
+.font-f13 {
+    font-size: font($app-font, f13)
+}
+
+.font-f14 {
+    font-size: font($app-font, f14)
+}
+
+.font-f15 {
+    font-size: font($app-font, f15)
+}
+
+.font-f16 {
+    font-size: font($app-font, f16)
+}
+
+.font-f19 {
+    font-size: font($app-font, f19)
+}
+
+.font-f20 {
+    font-size: font($app-font, f20)
+}
+
+.font-f32 {
+    font-size: font($app-font, f32)
+}
+
+.font-f40 {
+    font-size: font($app-font, f40)
+}
+
+.center {
+    text-align: center;
+}
+
+.big-button {
+    margin-right: 5%;
+    margin-left: 5%;
+    width: 90%;
+    font-size: font($app-font, f16);
+    opacity: 1;
+}
+.big-button.activated{
+    background: #E72E17;
+    opacity: 0.8;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-row-vertical-center{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.flex-row-verticalAndHorizon-center{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-column-verticalAndHorizon-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media not all and (min-width: 768px) and (min-height: 600px) {
+    ion-modal ion-backdrop {
+        visibility: visible;
+        z-index: -1;
+    }
+}
+
+::-webkit-scrollbar {  
+    display: none !important;  
+}
+.tabs-ios .tab-button-text {
+    margin-top: -3px;
+    margin-bottom: 4px;
+    min-height: 11px;
+}

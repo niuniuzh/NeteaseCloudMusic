@@ -1,0 +1,15 @@
+<ion-header  *ngIf="hasHeader">
+    <ion-navbar >
+        <ng-content select="view-header"></ng-content>
+        <ion-title *ngIf="title">{{title}}</ion-title>
+    </ion-navbar>
+    <ion-toolbar *ngIf="hasSubHeader" >
+        <ng-content select="view-sub-header"></ng-content>
+    </ion-toolbar>
+</ion-header>
+
+<ng-content ></ng-content>
+
+<ion-footer>
+    <ng-content select="view-footer"></ng-content>
+</ion-footer>

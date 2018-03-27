@@ -1,0 +1,47 @@
+page-login {
+    .common-input {
+        display: flex;
+        align-items: center;
+        margin: 0 10%;
+        border-bottom: solid 0.5px #929292;
+        ion-input {
+            color: black;
+        }
+    }
+    .email-input {
+        margin-top: 20px;
+        @extend .common-input;
+        ion-icon {
+            margin: 0 10px 0 0;
+        }
+    }
+    .passwd-input {
+        margin-top: 0.5333rem;
+        div {
+            ion-icon {
+                margin: 0 0 0 2px;
+            }
+        }
+        @extend .common-input;
+        ion-icon {
+            margin: 0 10px 0 0;
+        }
+    }
+    
+    .button-ios:active{
+        background-color: color($app-color, e7);
+    }
+    .loginbtn{
+        margin-top: 50px;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        button{
+            width: 80%;
+            font-size: font($app-font, f16);
+            padding: 0;
+            margin: 0;
+        } 
+    }
+}

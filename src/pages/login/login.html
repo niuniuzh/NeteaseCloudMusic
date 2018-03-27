@@ -1,0 +1,15 @@
+<music-view title="登录">
+  <ion-content>
+    <div class="email-input">
+      <ion-icon name="ios-mail-outline"></ion-icon>
+      <ion-input type="text" placeholder="登录邮箱" class="font-f15" [(ngModel)]="phone"></ion-input>
+    </div>
+    <div class="passwd-input">
+      <ion-icon ios="ios-lock-outline"></ion-icon>
+      <ion-input type="password" placeholder="密码" class="font-f15" [(ngModel)]="passWord"></ion-input>
+    </div>
+    <div class="loginbtn">
+      <button (click)="onLogin()" ion-button class="bg-color-e7">登录</button>
+    </div>
+  </ion-content>
+</music-view>

@@ -56,7 +56,7 @@ const PERSONALIZED_PRIVATECONTENT = "http://localhost:3000/personalized/privatec
 const TOP_MV = "http://localhost:3000/top/mv?";//mv 排行
 const MV_DATA = "http://localhost:3000/mv?";//获取 mv 数据
 const MV_URL = "http://localhost:3000/mv/url?";//播放 mv
-const TOP_LIST = "http://localhost:3000/top/list?";//排行榜
+//const TOP_LIST = "http://localhost:3000/top/list?";//排行榜
 // "0": 云音乐新歌榜,
 // "1": 云音乐热歌榜,
 // "2": 网易原创歌曲榜,

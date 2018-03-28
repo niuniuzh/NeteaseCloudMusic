@@ -1,3 +1,22 @@
 page-findMusic {
-
+    .head-item{
+        color:white;
+        background-color:red;
+    }
+    .search-input{
+        border:soild 1px #ef1f11;
+        border-radius:20px;
+        background-color: white;
+        height: 35px;
+        margin: 5px auto;
+        line-height: 35px;
+        color: black;
+        padding-left: 10px;
+        flex: unset;
+        width: 80%;
+        input{
+            margin: 0;
+            font-size: 12px;
+        }
+    }
 }

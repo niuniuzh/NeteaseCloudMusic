@@ -1,22 +1,23 @@
 <ion-header>
-    <ion-item style="color:white;background-color:red;">
-        <ion-input style="border:soild 1px #ef1f11;border-radius:20px;border-radius: 20px;
-    background-color: white;
-    height: 35px;
-    margin: 5px;
-    line-height: 35px;
-    color: black;
-    padding-left: 10px;" placeholder="sdjgklasdfjas"> </ion-input>
+    <ion-item class="head-item">
+        <ion-input class="search-input" placeholder="猜你喜欢"></ion-input>
     </ion-item>
 </ion-header>
 <ion-content>
+    <div style="display:flex;widows: 100%;height:100%;flex-direction:column">
+        <ion-item style="display:flex;align-items:center;justify-content:space-between;">
+            <span>发现音乐</span>
+            <span>主播电台</span>
+        </ion-item>
 
-    <ion-slides>
-        <ion-slide>
-            发现音乐
-        </ion-slide>
-        <ion-slide>
-            主播电台
-        </ion-slide>
-    </ion-slides>
+        <ion-slides style="flex:1;height:auto">
+            <ion-slide style="height:auto">
+                发现音乐
+            </ion-slide>
+            <ion-slide style="height:auto">
+                主播电台
+            </ion-slide>
+        </ion-slides>
+    </div>
+
 </ion-content>

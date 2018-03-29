@@ -1,11 +1,50 @@
 <ion-header>
     <ion-item class="head-item">
-        <ion-input class="search-input" placeholder="猜你喜欢"></ion-input>
+        <img src="assets/imgs/searchvoice.png">
+        <div class="mid-label">
+            <ion-icon class="search-icon" name="ios-search-outline"></ion-icon>
+            <input class="main-input" placeholder="猜你喜欢" readonly>
+        </div>
+        <style>
+            .cntloading {
+                animation-delay: 0s !important;
+                transform: translateY(50%);
+            }
+        </style>
+        <div style="vertical-align: baseline;
+        height: 1em;
+        overflow: hidden;
+        margin-left: 10px;
+        text-align: center;
+        display: inline-block;">
+            <span style="width: 2px;
+            height: 80%;
+            background-color: white;
+            position: relative;
+            margin-right: 0;
+            display: inline-block;
+            border-radius: 3px;
+            animation: cnloading 1s linear infinite;
+            transform-origin: center bottom;
+            font-size: 0;"></span>
+            <span style="width: 2px;
+            height: 80%;
+            background-color: white;
+            position: relative;
+            margin-right: 0;
+            display: inline-block;
+            border-radius: 3px;
+            animation: cnloading 1s linear infinite;
+            transform-origin: center bottom;
+            font-size: 0;"></span>
+            <span></span>
+            <span></span>
+        </div>
     </ion-item>
 </ion-header>
 <ion-content>
-    <div style="display:flex;widows: 100%;height:100%;flex-direction:column">
-        <ion-item style="display:flex;align-items:center;justify-content:space-between;">
+    <div class="content">
+        <ion-item class="slides-head">
             <span>发现音乐</span>
             <span>主播电台</span>
         </ion-item>

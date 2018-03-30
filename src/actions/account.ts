@@ -25,7 +25,7 @@ const PLAYLIST_COMMENT = 'http://localhost:3000/comment/playlist?';//歌单评�
 const MV_COMMENT = 'http://localhost:3000/comment/mv?';//mv 评论
 const DJ_COMMENT = 'http://localhost:3000/comment/dj?';//电台节目评论
 const LIKE_COMMENT = 'http://localhost:3000/comment/like?';//给评论点赞
-const GET_BANNER = 'http://localhost:3000/banner?';//轮播图
+
 const SONG_DETAIL = 'http://localhost:3000/song/detail?';//获取歌曲详情
 const GET_ALBUM = 'http://localhost:3000/album?';//获取专辑内容
 const ARTISTS = 'http://localhost:3000/artists?';//获取歌手单曲

@@ -1,62 +1,27 @@
 <ion-header>
     <ion-item class="head-item">
-        <img src="assets/imgs/searchvoice.png">
-        <div class="mid-label">
+        <img src="assets/imgs/searchvoice.png" (click)="voiceSearch()">
+        <div class="mid-label" (click)="search()">
             <ion-icon class="search-icon" name="ios-search-outline"></ion-icon>
             <input class="main-input" placeholder="猜你喜欢" readonly>
         </div>
-        <style>
-            .cntloading {
-                animation-delay: 0s !important;
-                transform: translateY(50%);
-            }
-        </style>
-        <div style="vertical-align: baseline;
-        height: 1em;
-        overflow: hidden;
-        margin-left: 10px;
-        text-align: center;
-        display: inline-block;">
-            <span style="width: 2px;
-            height: 80%;
-            background-color: white;
-            position: relative;
-            margin-right: 0;
-            display: inline-block;
-            border-radius: 3px;
-            animation: cnloading 1s linear infinite;
-            transform-origin: center bottom;
-            font-size: 0;"></span>
-            <span style="width: 2px;
-            height: 80%;
-            background-color: white;
-            position: relative;
-            margin-right: 0;
-            display: inline-block;
-            border-radius: 3px;
-            animation: cnloading 1s linear infinite;
-            transform-origin: center bottom;
-            font-size: 0;"></span>
-            <span></span>
-            <span></span>
+        <div class="updown" (click)="music()">
+            <span class="cl1"></span>
+            <span class="cl2"></span>
+            <span class="cl3"></span>
+            <span class="cl4"></span>
         </div>
     </ion-item>
 </ion-header>
 <ion-content>
     <div class="content">
-        <ion-item class="slides-head">
-            <span>发现音乐</span>
-            <span>主播电台</span>
-        </ion-item>
-
-        <ion-slides style="flex:1;height:auto">
-            <ion-slide style="height:auto">
-                发现音乐
-            </ion-slide>
-            <ion-slide style="height:auto">
-                主播电台
+        <ion-slides style="height:125px;">
+            <ion-slide style="height:auto;align-items: flex-start;" *ngFor="let banner of bannersImage">
+                <img src={{banner.pic}} style="height:125px;">
             </ion-slide>
         </ion-slides>
     </div>
-
+    <div>
+        
+    </div>
 </ion-content>

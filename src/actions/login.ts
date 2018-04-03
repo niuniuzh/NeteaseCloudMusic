@@ -26,7 +26,7 @@ export class LoginAction {
             var args = {};
             // args['uid'] = '331310481';
             args['phone'] = '18680673675';
-            args['password'] = 'miss1221';
+            args['password'] = 'missnote';
             options.body = args;
             NetEase.getInstance().get(options)
                 .subscribe((res) => {

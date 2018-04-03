@@ -5,7 +5,6 @@ import { MusicApp } from './app.component';
 
 import { FindMusicPage } from '../pages/tabs/findMusic/findMusic';
 import { MyMusicPage } from '../pages/tabs/myMusic/myMusic';
-import { FriendsPage } from '../pages/tabs/friends/friends';
 import { AccountPage } from '../pages/tabs/account/account';
 import { TabsPage } from '../pages/tabs/tabs/tabs';
 import { MusicModule } from '../components/Music.module';
@@ -20,7 +19,6 @@ import { HttpModule } from '@angular/http';
     MusicApp,
     FindMusicPage,
     MyMusicPage,
-    FriendsPage,
     AccountPage,
     TabsPage,
     LoginPage
@@ -36,7 +34,6 @@ import { HttpModule } from '@angular/http';
     MusicApp,
     FindMusicPage,
     MyMusicPage,
-    FriendsPage,
     AccountPage,
     TabsPage,
     LoginPage

@@ -13,6 +13,14 @@ import { LoginPage } from '../pages/login/login';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HttpModule } from '@angular/http';
+import { VoiceSearchPage } from '../pages/voice-search/voice-search';
+import { VoiceSearchPageModule } from '../pages/voice-search/voice-search.module';
+import { MusicPlayPageModule } from '../pages/music-play/music-play.module';
+import { SearchPageModule } from '../pages/search/search.module';
+import { PersonalFmPageModule } from '../pages/personal-fm/personal-fm.module';
+import { TopListPageModule } from '../pages/top-list/top-list.module';
+import { TopPlayListPageModule } from '../pages/top-play-list/top-play-list.module';
+import { RecommendSongsPageModule } from '../pages/recommend-songs/recommend-songs.module';
 
 @NgModule({
   declarations: [
@@ -26,8 +34,19 @@ import { HttpModule } from '@angular/http';
   imports: [
     BrowserModule,
     MusicModule,
-    IonicModule.forRoot(MusicApp),
-    HttpModule
+    IonicModule.forRoot(MusicApp,{
+      backButtonText: '',//按钮内容
+      backButtonIcon: 'arrow-dropleft-circle',//按钮图标样式
+      }),
+    HttpModule,
+    VoiceSearchPageModule,
+    MusicPlayPageModule,
+    SearchPageModule,
+    PersonalFmPageModule,
+    TopListPageModule,
+    TopPlayListPageModule,
+    RecommendSongsPageModule,
+    TopListPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

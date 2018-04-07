@@ -94,6 +94,42 @@ page-findMusic {
         widows: 100%;
         height:100%;
         flex-direction:column;
+        ion-slides{
+            height: 125px;
+        }
+        .banners{
+            height:auto;
+            align-items: flex-start;
+            img{
+                height: 125px;
+            }
+        }
+        .icon-list{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;padding-top: 20px;
+            padding-bottom: 20px;
+            border-bottom: solid 1px;
+            div{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                div{
+                    border-radius: 50%;
+                    border: solid 1px #d43b33;
+                    height: 50px;
+                    width: 50px;
+                    .icon-img{
+                        width: 33px;
+                        height: 33px;
+                        margin: 7px;
+                    }
+                }
+                span{
+                    margin-top: 5px;
+                }
+            }
+        }
     }
     .item-ios.item-block .item-inner{
         padding: 0;

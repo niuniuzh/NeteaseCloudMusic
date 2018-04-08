@@ -36,7 +36,7 @@ import { RecommendSongsPageModule } from '../pages/recommend-songs/recommend-son
     MusicModule,
     IonicModule.forRoot(MusicApp,{
       backButtonText: '',//按钮内容
-      backButtonIcon: 'arrow-dropleft-circle',//按钮图标样式
+      backButtonIcon: 'arrow-back',//按钮图标样式
       }),
     HttpModule,
     VoiceSearchPageModule,

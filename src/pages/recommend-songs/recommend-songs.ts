@@ -16,14 +16,15 @@ import { RecommendsAction } from '../../actions/recommend';
 })
 export class RecommendSongsPage {
 
-  recommends:Array<object> = null;
+  // recommends:Array<object> = null;
+  recommends=[];
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     RecommendsAction.getInstance().recommendSongs().subscribe((res)=>{
-      console.log(res);
+      console.log(res.recommend,'@@@@@@@@@@@@@@@@@@@@@@');
       this.recommends = res.recommend;
     })
     console.log('ionViewDidLoad RecommendSongsPage');

@@ -24,11 +24,11 @@
   <div>
 
   </div>
-  <ion-item ngFor="let item of recommends">
-    <img>
+  <ion-item class="song-items" *ngFor="let item of recommends">
+    <img src="{{item.album.blurPicUrl}}" style="width:40px;height:40px;">
     <div>
-      <div>{{item}}</div>
-      <div></div>
+      <div>{{item.name}}</div>
+      <div>{{item.artists[0].name}}-{{item.album.name}}</div>
     </div>
     <span></span>
   </ion-item>

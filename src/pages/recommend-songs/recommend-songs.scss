@@ -51,4 +51,19 @@ page-recommend-songs {
             }
         }
     }
+
+    .song-items{
+        background-color: white;
+        padding: 0;
+        ion-label{
+            display: flex;
+            align-items: center;
+            img{
+                margin-left: 16px;
+            }
+            div{
+                margin-left: 10px;
+            }
+        }
+    }
 }

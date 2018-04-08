@@ -33,7 +33,16 @@ $header-title-color:white;
 }
 
 .button-inner .back-button-icon-ios {
-    font-size: 1.088rem;
+    font-size: 30px;
+    color: white;
+    margin-left: 5px;
+}
+.toolbar-title-ios{
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: white;
+    pointer-events: auto;
 }
 
 .picker-ios .picker-opt {

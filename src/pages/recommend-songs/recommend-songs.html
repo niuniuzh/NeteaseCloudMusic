@@ -27,8 +27,9 @@
   <ion-item class="song-items" *ngFor="let item of recommends">
     <img src="{{item.album.blurPicUrl}}" style="width:40px;height:40px;">
     <div>
-      <div>{{item.name}}</div>
-      <div>{{item.artists[0].name}}-{{item.album.name}}</div>
+      <div style="font-size: 14px;color: black;width: 165px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">{{item.name}}</div>
+      <div style="overflow: hidden;text-overflow:ellipsis;
+      white-space: nowrap;color:#7f7f81;font-size:12px;min-width:100px;max-width:125px;">{{item.artists[0].name}}-{{item.album.name}}</div>
     </div>
     <span></span>
   </ion-item>

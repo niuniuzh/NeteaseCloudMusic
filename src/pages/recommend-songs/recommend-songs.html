@@ -18,12 +18,13 @@
 
 <ion-content>
   <div>
-    <img>
+    <img src="assets/imgs/recmd_daily.jpg">
   </div>
 
-  <div>
+  <ion-item class="song-items">
+    <span style="margin-left:15px;">播放全部</span>
+  </ion-item>
 
-  </div>
   <ion-item class="song-items" *ngFor="let item of recommends">
     <img src="{{item.album.blurPicUrl}}" style="width:40px;height:40px;">
     <div>

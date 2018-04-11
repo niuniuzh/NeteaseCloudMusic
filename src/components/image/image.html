@@ -1,0 +1,15 @@
+<!-- Generated template for the ImageComponent component -->
+<div class="goods_grid" (item-click) ="onClick($event)">
+    <img-loader src="{{item.mpicpath}}" useImg></img-loader>
+    <p class="name">{{item.gname ? item.gname : '暂无'}}</p>
+    <div class="price-div">
+      <p class="price">￥{{item.price}}</p>
+      <p class="price-old" *ngIf="item.oldprice && item.price != item.oldprice">￥{{item.oldprice}}</p>
+    </div>
+    <div class="font-f12 color-99">
+        {{item.productionplace?item.productionplace:'详见商品'}}
+        <div class="buy-btn" float-right (cart-click) ="onCartClick($event)">
+            +购物车
+        </div>
+    </div>
+  </div>

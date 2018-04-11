@@ -1,0 +1,38 @@
+image {
+    .goods_grid{
+        display: flex;
+        flex-direction: column;
+        background: white;
+        padding: 4px;
+        img-loader{
+
+        }
+        .name{
+            height: 1.0667rem;
+            color: black;
+            white-space: normal;
+            word-break: break-all;
+            overflow: hidden;
+            font-size: 0.3733rem;
+            margin: 0;
+            margin-top: -0.1333rem;
+        }
+        .price-div{
+            .price{
+                display:inline-flex;
+                color: color($app-color,e7);
+            }
+            .price-old{
+                display:inline-flex;
+                color: color($app-color,99);
+                text-decoration:line-through;
+            }
+        }
+        .buy-btn{
+            border: 1px solid color($app-color,e7);
+            color: color($app-color,e7);
+            border-radius: 4px;
+            padding: 0 4px;
+        }
+    }
+}

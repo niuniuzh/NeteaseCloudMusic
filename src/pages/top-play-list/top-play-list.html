@@ -17,6 +17,23 @@
 </ion-header>
 
 
-<ion-content padding>
-
+<ion-content>
+    <div>
+        <img src="assets/imgs/recmd_daily.jpg">
+      </div>
+    
+      <ion-item class="song-items">
+        <img style="width:20px;height:20px;" src="assets/imgs/musiclistplay.png">
+        <span style="margin-left:15px;font-size:16px;">播放全部</span>
+      </ion-item>
+    
+      <ion-item class="song-items" *ngFor="let item of playlists">
+        <img src="{{item.coverImgUrl}}" style="width:40px;height:40px;">
+        <div>
+          <div style="font-size: 14px;color: black;width: 165px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">{{item.name}}</div>
+          <div style="overflow: hidden;text-overflow:ellipsis;
+          white-space: nowrap;color:#7f7f81;font-size:12px;min-width:100px;max-width:125px;">{{item.name}}</div>
+        </div>
+        <span></span>
+      </ion-item>
 </ion-content>

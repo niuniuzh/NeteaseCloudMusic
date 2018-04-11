@@ -11,7 +11,7 @@ const USER_FOLLOWEDS = 'http://localhost:3000/user/followeds?';//获取用户粉
 const USER_EVENT = 'http://localhost:3000/user/event?';//获取用户动态
 const USER_RECORD = 'http://localhost:3000/user/record?';//获取用户播放记录
 const DYNAMIC_EVENT = 'http://localhost:3000/event?';//获取动态消息
-const HIGHQUALITY_LIST = 'http://localhost:3000/top/playlist/highquality?';//获取精品歌单
+
 const PLAYLIST_DETAIL = 'http://localhost:3000/playlist/detail?';//获取歌单详情
 const MUSIC_URL = 'http://localhost:3000/music/url?';//获取音乐 url
 const SEARCH_MUSIC = 'http://localhost:3000/search?';//搜索
@@ -237,18 +237,7 @@ export class AccountAction {
                 });
         })
     }
-    public getHighQualityList():Observable<any>{
-        return Observable.create((observe:Subject<any>)=>{
-            let options = new RequestOptions();
-            options.url = HIGHQUALITY_LIST;
-            NetEase.getInstance().get(options)
-                .subscribe((res) => {
-                    observe.next(res);
-                }, (error) => {
-                    observe.error(error);
-                });
-        })
-    }
+
     public getPlayListDetail():Observable<any>{
         return Observable.create((observe:Subject<any>)=>{
             let options = new RequestOptions();

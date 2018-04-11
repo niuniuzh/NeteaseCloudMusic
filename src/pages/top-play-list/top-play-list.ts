@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { PlayListAction } from '../../actions/playList';
 
 /**
  * Generated class for the TopPlayListPage page.
@@ -15,10 +16,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class TopPlayListPage {
 
+  playlists:Array<object>;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
+    PlayListAction.getInstance().getHighQualityList().subscribe((res) => {
+      this.playlists = res;
+    }, error => {
+
+    })
     console.log('ionViewDidLoad TopPlayListPage');
   }
 

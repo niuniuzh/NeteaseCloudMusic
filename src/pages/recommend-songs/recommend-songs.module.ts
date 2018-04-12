@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { RecommendSongsPage } from './recommend-songs';
+import { IonicImageLoader } from 'ionic-image-loader';
 
 @NgModule({
   declarations: [
@@ -8,6 +9,7 @@ import { RecommendSongsPage } from './recommend-songs';
   ],
   imports: [
     IonicPageModule.forChild(RecommendSongsPage),
+    IonicImageLoader
   ],
 })
 export class RecommendSongsPageModule {}

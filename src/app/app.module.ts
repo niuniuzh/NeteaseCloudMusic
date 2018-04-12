@@ -21,7 +21,7 @@ import { TopListPageModule } from '../pages/top-list/top-list.module';
 import { TopPlayListPageModule } from '../pages/top-play-list/top-play-list.module';
 import { RecommendSongsPageModule } from '../pages/recommend-songs/recommend-songs.module';
 import { ComponentsModule } from '../components/components.module';
-import { IonicImageLoader} from 'ionic-image-loader'
+import { IonicImageLoader } from 'ionic-image-loader';
 
 @NgModule({
   declarations: [

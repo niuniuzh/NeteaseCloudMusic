@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { ImageComponent } from './image/image';
 import { ViewHeader, ViewSubHeader, ViewFooter, MusicView } from './View/view.component';
 import { IonicModule } from 'ionic-angular';
+import { IonicImageLoader } from 'ionic-image-loader';
+
 @NgModule({
     declarations: [
         ImageComponent,
@@ -11,7 +13,7 @@ import { IonicModule } from 'ionic-angular';
         MusicView
     ],
     imports: [
-        IonicModule
+        IonicModule, IonicImageLoader
     ],
     exports: [
         ImageComponent,

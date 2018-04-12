@@ -27,7 +27,7 @@
   </ion-item>
 
   <ion-item class="song-items" *ngFor="let item of recommends">
-    <img src="{{item.album.blurPicUrl}}" style="width:40px;height:40px;">
+    <img-loader  style="width:40px;height:40px;" src="{{item.album.blurPicUrl}}" useImg></img-loader>
     <div>
       <div style="font-size: 14px;color: black;width: 165px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">{{item.name}}</div>
       <div style="overflow: hidden;text-overflow:ellipsis;

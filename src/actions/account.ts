@@ -2,53 +2,53 @@ import { Observable, Subject } from 'rxjs/Rx';
 import { NetEase } from '../utils/api';
 import { RequestOptions } from '@angular/http';
 
-const USER_DETAIL = 'http://localhost:3000/user/detail?';//获取用户详情
-const SUB_COUNT = 'http://localhost:3000/user/subcount';//获取用户信息 , 歌单，收藏，mv, dj 数量
-const PLAY_LIST = 'http://localhost:3000/user/playlist?';//获取用户歌单
-const USER_DJ = 'http://localhost:3000/user/dj?';//获取用户电台
-const USER_FOLLOWS = 'http://localhost:3000/user/follows?';//获取用户关注列表
-const USER_FOLLOWEDS = 'http://localhost:3000/user/followeds?';//获取用户粉丝列表
-const USER_EVENT = 'http://localhost:3000/user/event?';//获取用户动态
-const USER_RECORD = 'http://localhost:3000/user/record?';//获取用户播放记录
-const DYNAMIC_EVENT = 'http://localhost:3000/event?';//获取动态消息
+const USER_DETAIL = 'http://23.105.202.41:3000/user/detail?';//获取用户详情
+const SUB_COUNT = 'http://23.105.202.41:3000/user/subcount';//获取用户信息 , 歌单，收藏，mv, dj 数量
+const PLAY_LIST = 'http://23.105.202.41:3000/user/playlist?';//获取用户歌单
+const USER_DJ = 'http://23.105.202.41:3000/user/dj?';//获取用户电台
+const USER_FOLLOWS = 'http://23.105.202.41:3000/user/follows?';//获取用户关注列表
+const USER_FOLLOWEDS = 'http://23.105.202.41:3000/user/followeds?';//获取用户粉丝列表
+const USER_EVENT = 'http://23.105.202.41:3000/user/event?';//获取用户动态
+const USER_RECORD = 'http://23.105.202.41:3000/user/record?';//获取用户播放记录
+const DYNAMIC_EVENT = 'http://23.105.202.41:3000/event?';//获取动态消息
 
-const PLAYLIST_DETAIL = 'http://localhost:3000/playlist/detail?';//获取歌单详情
-const MUSIC_URL = 'http://localhost:3000/music/url?';//获取音乐 url
-const SEARCH_MUSIC = 'http://localhost:3000/search?';//搜索
-const SEARCH_SUGGEST = 'http://localhost:3000/search/suggest?';//搜索建议
-const SEARCH_MULTIMATCH = 'http://localhost:3000/search/multimatch?';//搜索多重匹配
-const PLAYLIST_TRACKS = 'http://localhost:3000/playlist/tracks?';//对歌单添加或删除歌曲
-const GET_LYRIC = 'http://localhost:3000/lyric?';//获取歌词
-const MUSIC_COMMENT = 'http://localhost:3000/comment/music?';//歌曲评论
-const ALBUM_COMMENT = 'http://localhost:3000/comment/album?';//专辑评论
-const PLAYLIST_COMMENT = 'http://localhost:3000/comment/playlist?';//歌单评论
-const MV_COMMENT = 'http://localhost:3000/comment/mv?';//mv 评论
-const DJ_COMMENT = 'http://localhost:3000/comment/dj?';//电台节目评论
-const LIKE_COMMENT = 'http://localhost:3000/comment/like?';//给评论点赞
-const SONG_DETAIL = 'http://localhost:3000/song/detail?';//获取歌曲详情
-const GET_ALBUM = 'http://localhost:3000/album?';//获取专辑内容
-const ARTISTS = 'http://localhost:3000/artists?';//获取歌手单曲
-const ARTISTS_MV = 'http://localhost:3000/artist/mv?';//获取歌手 mv
-const ARTISTS_ALBUM = 'http://localhost:3000/artist/album?';//获取歌手专辑
-const ARTISTS_DESC = 'http://localhost:3000/artist/desc?';//获取歌手描述
-const SIMI_ARTISTS = 'http://localhost:3000/simi/artist?';//获取相似歌手
-const SIMI_PLAYLIST = 'http://localhost:3000/simi/playlist?';//获取相似歌单
-const SIMI_MV = 'http://localhost:3000/simi/mv?';//相似 mv
-const SIMI_SONG = 'http://localhost:3000/simi/song?';//获取相似音乐
-const SIMI_USER = 'http://localhost:3000/simi/user?';//获取最近 5 个听了这首歌的用户
-const PERSONAL_FM = 'http://localhost:3000/personal_fm?';//私人 FM
-const DAILY_TASK = "http://localhost:3000/daily_signin?";//签到
-const LIKE_SONGS = "http://localhost:3000/like?";//喜欢音乐
-const FM_TRASH = "http://localhost:3000/fm_trash?";//垃圾桶
-const TOP_PLAYLIST = "http://localhost:3000/top/playlist?";//歌单 ( 网友精选碟 )
-const TOP_ALBUM = "http://localhost:3000/top/album?";//新碟上架
-const TOP_ARTISTS = "http://localhost:3000/top/artists?";//热门歌手
-const MV_FIRST = "http://localhost:3000/mv/first?";//最新 mv
-const PERSONALIZED_PRIVATECONTENT = "http://localhost:3000/personalized/privatecontent?";//独家放送
-const TOP_MV = "http://localhost:3000/top/mv?";//mv 排行
-const MV_DATA = "http://localhost:3000/mv?";//获取 mv 数据
-const MV_URL = "http://localhost:3000/mv/url?";//播放 mv
-//const TOP_LIST = "http://localhost:3000/top/list?";//排行榜
+const PLAYLIST_DETAIL = 'http://23.105.202.41:3000/playlist/detail?';//获取歌单详情
+const MUSIC_URL = 'http://23.105.202.41:3000/music/url?';//获取音乐 url
+const SEARCH_MUSIC = 'http://23.105.202.41:3000/search?';//搜索
+const SEARCH_SUGGEST = 'http://23.105.202.41:3000/search/suggest?';//搜索建议
+const SEARCH_MULTIMATCH = 'http://23.105.202.41:3000/search/multimatch?';//搜索多重匹配
+const PLAYLIST_TRACKS = 'http://23.105.202.41:3000/playlist/tracks?';//对歌单添加或删除歌曲
+const GET_LYRIC = 'http://23.105.202.41:3000/lyric?';//获取歌词
+const MUSIC_COMMENT = 'http://23.105.202.41:3000/comment/music?';//歌曲评论
+const ALBUM_COMMENT = 'http://23.105.202.41:3000/comment/album?';//专辑评论
+const PLAYLIST_COMMENT = 'http://23.105.202.41:3000/comment/playlist?';//歌单评论
+const MV_COMMENT = 'http://23.105.202.41:3000/comment/mv?';//mv 评论
+const DJ_COMMENT = 'http://23.105.202.41:3000/comment/dj?';//电台节目评论
+const LIKE_COMMENT = 'http://23.105.202.41:3000/comment/like?';//给评论点赞
+const SONG_DETAIL = 'http://23.105.202.41:3000/song/detail?';//获取歌曲详情
+const GET_ALBUM = 'http://23.105.202.41:3000/album?';//获取专辑内容
+const ARTISTS = 'http://23.105.202.41:3000/artists?';//获取歌手单曲
+const ARTISTS_MV = 'http://23.105.202.41:3000/artist/mv?';//获取歌手 mv
+const ARTISTS_ALBUM = 'http://23.105.202.41:3000/artist/album?';//获取歌手专辑
+const ARTISTS_DESC = 'http://23.105.202.41:3000/artist/desc?';//获取歌手描述
+const SIMI_ARTISTS = 'http://23.105.202.41:3000/simi/artist?';//获取相似歌手
+const SIMI_PLAYLIST = 'http://23.105.202.41:3000/simi/playlist?';//获取相似歌单
+const SIMI_MV = 'http://23.105.202.41:3000/simi/mv?';//相似 mv
+const SIMI_SONG = 'http://23.105.202.41:3000/simi/song?';//获取相似音乐
+const SIMI_USER = 'http://23.105.202.41:3000/simi/user?';//获取最近 5 个听了这首歌的用户
+const PERSONAL_FM = 'http://23.105.202.41:3000/personal_fm?';//私人 FM
+const DAILY_TASK = "http://23.105.202.41:3000/daily_signin?";//签到
+const LIKE_SONGS = "http://23.105.202.41:3000/like?";//喜欢音乐
+const FM_TRASH = "http://23.105.202.41:3000/fm_trash?";//垃圾桶
+const TOP_PLAYLIST = "http://23.105.202.41:3000/top/playlist?";//歌单 ( 网友精选碟 )
+const TOP_ALBUM = "http://23.105.202.41:3000/top/album?";//新碟上架
+const TOP_ARTISTS = "http://23.105.202.41:3000/top/artists?";//热门歌手
+const MV_FIRST = "http://23.105.202.41:3000/mv/first?";//最新 mv
+const PERSONALIZED_PRIVATECONTENT = "http://23.105.202.41:3000/personalized/privatecontent?";//独家放送
+const TOP_MV = "http://23.105.202.41:3000/top/mv?";//mv 排行
+const MV_DATA = "http://23.105.202.41:3000/mv?";//获取 mv 数据
+const MV_URL = "http://23.105.202.41:3000/mv/url?";//播放 mv
+//const TOP_LIST = "http://23.105.202.41:3000/top/list?";//排行榜
 // "0": 云音乐新歌榜,
 // "1": 云音乐热歌榜,
 // "2": 网易原创歌曲榜,
@@ -74,13 +74,13 @@ const MV_URL = "http://localhost:3000/mv/url?";//播放 mv
 // "22": 云音乐ACG音乐榜,
 // "23": 云音乐嘻哈榜
 
-const TOP_LIST = "http://localhost:3000/top/list?";//排行榜
-const TOP_LIST_ARTIST = "http://localhost:3000/toplist/artist?";//歌手榜
-const USER_CLOUD = "http://localhost:3000/user/cloud?";//云盘
-const DJ_CATELIST = "http://localhost:3000/dj/catelist?";//电台 - 分类
-const DJ_SUB = "http://localhost:3000/dj/sub?";//电台 - 订阅
-const DJ_DETAIL = "http://localhost:3000/dj/detail?";//电台 - 详情
-const DJ_PROGRAM = "http://localhost:3000/dj/program?";//电台 - 节目
+const TOP_LIST = "http://23.105.202.41:3000/top/list?";//排行榜
+const TOP_LIST_ARTIST = "http://23.105.202.41:3000/toplist/artist?";//歌手榜
+const USER_CLOUD = "http://23.105.202.41:3000/user/cloud?";//云盘
+const DJ_CATELIST = "http://23.105.202.41:3000/dj/catelist?";//电台 - 分类
+const DJ_SUB = "http://23.105.202.41:3000/dj/sub?";//电台 - 订阅
+const DJ_DETAIL = "http://23.105.202.41:3000/dj/detail?";//电台 - 详情
+const DJ_PROGRAM = "http://23.105.202.41:3000/dj/program?";//电台 - 节目
 
 export class AccountAction {
     private static instance: AccountAction;

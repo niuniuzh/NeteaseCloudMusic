@@ -2,7 +2,7 @@ import { Observable, Subject } from 'rxjs/Rx';
 import { NetEase } from '../utils/api';
 import { RequestOptions } from '@angular/http';
 
-const PHONE_LOGIN = "http://localhost:3000/login/cellphone?";
+const PHONE_LOGIN = "http://23.105.202.41:3000/login/cellphone?";
 
 export class LoginAction {
     private static instance: LoginAction;

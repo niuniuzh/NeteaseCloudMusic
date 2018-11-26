@@ -2,7 +2,7 @@ import { Observable, Subject } from 'rxjs/Rx';
 import { NetEase } from '../utils/api';
 import { RequestOptions } from '@angular/http';
 
-const GET_BANNER = 'http://localhost:3000/banner?';//轮播图
+const GET_BANNER = 'http://23.105.202.41:3000/banner?';//轮播图
 
 export class FindAction {
     private static instance: FindAction;

@@ -2,7 +2,7 @@ import { Observable, Subject } from 'rxjs/Rx';
 import { NetEase } from '../utils/api';
 import { RequestOptions } from '@angular/http';
 
-const HIGHQUALITY_LIST = 'http://localhost:3000/top/playlist/highquality?';//获取精品歌单
+const HIGHQUALITY_LIST = 'http://23.105.202.41:3000/top/playlist/highquality?';//获取精品歌单
 
 export class PlayListAction {
     private static instance: PlayListAction;
